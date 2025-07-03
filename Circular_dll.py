@@ -100,8 +100,8 @@ if __name__ == '__main__':
   print("List after removing 'Quick':")
   mycircle.showlistforward()
 
-  mycircle.removing("Quick")  # Should print not found
-  mycircle.removing("Slow")  # Should print not found
+  mycircle.removing("Quick")  # not found
+  mycircle.removing("Slow")  # not found
 
   mycircle.removing("Brown")
   print("List after removing 'Brown':")
