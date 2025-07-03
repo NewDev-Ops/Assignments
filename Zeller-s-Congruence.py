@@ -21,8 +21,8 @@ class DateCalculator:
         return self.year // 100
 
 ##final calculation
-    def final_formula(self, calculate_of_the_century, zero_based_century):
-        return (self.day + (13*(self.month + 1) / 5) + calculate_of_the_century + (calculate_of_the_century / 4) + (zero_based_century / 4) + 5*zero_based_century) % 7
+    def final_formula(self, k, j):
+      return (self.day + ((13 * (self.month + 1)) // 5) + k + (k // 4) + (j // 4) + 5 * j) % 7
 
 
 test = DateCalculator(2022, 1, 1)
