@@ -1,3 +1,6 @@
+
+import re
+
 class Node:
   def __init__(self, data):
     self.data = data
@@ -53,6 +56,9 @@ def is_palindrome_using_stack(s: str) -> bool:
   teststack = Stack()
   testqueue = Queue()
 
+  s = s.lower().replace(" ", "") #Ignores spaces
+  s = re.sub(r'[^a-z0-9]', '', s.lower()) #Handles sentences
+
   for i in s:
     teststack.push(i)
     testqueue.enqueue(i)
@@ -65,3 +71,4 @@ def is_palindrome_using_stack(s: str) -> bool:
 
 print(is_palindrome_using_stack("racecar"))
 print(is_palindrome_using_stack("hello"))
+print(is_palindrome_using_stack("A man a plan a canal Panama"))
